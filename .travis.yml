@@ -1,0 +1,18 @@
+notifications:
+  email:
+    on_success: never
+    on_failure: always
+    
+language: go
+go:
+  - "1.10"
+
+install:
+  - go get -t -v ./...
+  - go get github.com/bmizerany/assert
+
+script:
+ - sh coverage.sh
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
