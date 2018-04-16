@@ -4,8 +4,8 @@ RUN mkdir /app
 ADD . /app/ 
 WORKDIR /app 
 
-RUN go get github.com/gin-gonic/gin
-RUN go get github.com/kaka-crawler/service-reddit
+RUN go get -u github.com/golang/dep/cmd/dep
+RUN dep ensure
 
 EXPOSE 9000
 
