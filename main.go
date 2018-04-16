@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"net/http"
 
+	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
 	"github.com/gonitor/gonitor/route"
 )
@@ -34,13 +34,7 @@ func main() {
 
 	route.SetRoutes(router)
 
-	router.LoadHTMLGlob("./view/*")
-
-	router.Static("/view", "./view")
-
-	router.GET("/", func(context *gin.Context) {
-		context.HTML(http.StatusOK, "index.html", gin.H{})
-	})
+	router.Use(static.Serve("/", static.LocalFile("./view", true)))
 
 	router.NoRoute(func(context *gin.Context) {
 		context.HTML(404, "404.html", gin.H{})
