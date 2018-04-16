@@ -7,6 +7,7 @@ import (
 
 	"github.com/bmizerany/assert"
 	"github.com/gin-gonic/gin"
+	"github.com/gonitor/gonitor/resource/network"
 	"github.com/gonitor/gonitor/route"
 )
 
@@ -32,7 +33,12 @@ func TestNetworkGetInterfaces(test *testing.T) {
 	req, _ := http.NewRequest("GET", url, nil)
 	resp := httptest.NewRecorder()
 	testRouter.ServeHTTP(resp, req)
-	assert.Equal(test, resp.Code, 200)
+	_, err := network.GetInterfaces()
+	if err == nil {
+		assert.Equal(test, resp.Code, 200)
+	} else {
+		assert.Equal(test, resp.Code, 400)
+	}
 
 }
 
@@ -44,6 +50,10 @@ func TestNetworkGetConnections(test *testing.T) {
 	req, _ := http.NewRequest("GET", url, nil)
 	resp := httptest.NewRecorder()
 	testRouter.ServeHTTP(resp, req)
-	assert.Equal(test, resp.Code, 200)
-
+	_, err := network.GetConnections()
+	if err == nil {
+		assert.Equal(test, resp.Code, 200)
+	} else {
+		assert.Equal(test, resp.Code, 400)
+	}
 }

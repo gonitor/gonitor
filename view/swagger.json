@@ -25,7 +25,7 @@
   } ],
   "schemes" : [ "http" ],
   "paths" : {
-    "/api/host/info" : {
+    "/api/v1/host/info" : {
       "get" : {
         "tags" : [ "host" ],
         "summary" : "get host info",
@@ -43,7 +43,7 @@
         }
       }
     },
-    "/api/host/temperature" : {
+    "/api/v1/host/temperature" : {
       "get" : {
         "tags" : [ "host" ],
         "summary" : "get host sensor temperature",
@@ -61,7 +61,7 @@
         }
       }
     },
-    "/api/cpu/sum/percent" : {
+    "/api/v1/cpu/sum/percent" : {
       "get" : {
         "tags" : [ "cpu" ],
         "summary" : "get cpu summary percentage",
@@ -79,7 +79,7 @@
         }
       }
     },
-    "/api/cpu/sum/time" : {
+    "/api/v1/cpu/sum/time" : {
       "get" : {
         "tags" : [ "cpu" ],
         "summary" : "get cpu summary time",
@@ -97,7 +97,7 @@
         }
       }
     },
-    "/api/cpu/count" : {
+    "/api/v1/cpu/count" : {
       "get" : {
         "tags" : [ "cpu" ],
         "summary" : "get cpu count",
@@ -115,7 +115,7 @@
         }
       }
     },
-    "/api/cpu/info" : {
+    "/api/v1/cpu/info" : {
       "get" : {
         "tags" : [ "cpu" ],
         "summary" : "get cpu info",
@@ -133,7 +133,7 @@
         }
       }
     },
-    "/api/gpu/info" : {
+    "/api/v1/gpu/info" : {
       "get" : {
         "tags" : [ "gpu" ],
         "summary" : "get gpu info",
@@ -151,7 +151,7 @@
         }
       }
     },
-    "/api/cpu/percent" : {
+    "/api/v1/cpu/percent" : {
       "get" : {
         "tags" : [ "cpu" ],
         "summary" : "get cpu percent",
@@ -169,7 +169,7 @@
         }
       }
     },
-    "/api/cpu/time" : {
+    "/api/v1/cpu/time" : {
       "get" : {
         "tags" : [ "cpu" ],
         "summary" : "get cpu time",
@@ -187,7 +187,7 @@
         }
       }
     },
-    "/api/mem/virtual" : {
+    "/api/v1/memory/virtual" : {
       "get" : {
         "tags" : [ "memory" ],
         "summary" : "get virtual memory",
@@ -205,7 +205,7 @@
         }
       }
     },
-    "/api/mem/swap" : {
+    "/api/v1/memory/swap" : {
       "get" : {
         "tags" : [ "memory" ],
         "summary" : "get swap memory",
@@ -223,7 +223,7 @@
         }
       }
     },
-    "/api/disk/usage" : {
+    "/api/v1/disk/usage" : {
       "get" : {
         "tags" : [ "disk" ],
         "summary" : "get disk usage",
@@ -241,7 +241,7 @@
         }
       }
     },
-    "/api/load/average" : {
+    "/api/v1/load/average" : {
       "get" : {
         "tags" : [ "load" ],
         "summary" : "get load average",
@@ -259,7 +259,7 @@
         }
       }
     },
-    "/api/load/misc" : {
+    "/api/v1/load/misc" : {
       "get" : {
         "tags" : [ "load" ],
         "summary" : "get load misc",
@@ -277,7 +277,7 @@
         }
       }
     },
-    "/api/net/interface" : {
+    "/api/v1/network/interfaces" : {
       "get" : {
         "tags" : [ "network" ],
         "summary" : "get network interface",
@@ -295,7 +295,7 @@
         }
       }
     },
-    "/api/net/connection" : {
+    "/api/v1/network/connections" : {
       "get" : {
         "tags" : [ "network" ],
         "summary" : "get network connection",
@@ -313,7 +313,7 @@
         }
       }
     },
-    "/api/runtime/goos" : {
+    "/api/v1/runtime/goos" : {
       "get" : {
         "tags" : [ "runtime" ],
         "summary" : "get runtime go OS",
