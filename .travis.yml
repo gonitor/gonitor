@@ -22,5 +22,5 @@ script:
 after_success:
   - bash <(curl -s https://codecov.io/bash)
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t gonitor/gonitor:0.0.0-preview .
-  - docker push gonitor/gonitor:0.0.0-preview
+  - docker build -t gonitor/gonitor:0.0.0 .
+  - docker push gonitor/gonitor:0.0.0
