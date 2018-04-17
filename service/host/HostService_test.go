@@ -16,7 +16,6 @@ func TestServiceGetInfo(test *testing.T) {
 
 // TestServiceGetTemperature .
 func TestServiceGetTemperature(test *testing.T) {
-	result, err := host.ServiceGetTemperature()
+	_, err := host.ServiceGetTemperature()
 	assert.Equal(test, err == nil, true)
-	assert.Equal(test, result != nil, true)
 }
