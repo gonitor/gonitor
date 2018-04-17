@@ -6,6 +6,9 @@
 
 Gonitor is fast server monitor service that make monitoring servers easy and simple. Gonitor provides many cool features for monitoring server CPU, Memory, GPU, Disk, Load, Network, etc. If you like or use Gonitor, please star or share it ! 
 
+## Features
+- 
+
 ## Installation
 
 Get the gonitor repository
@@ -40,10 +43,16 @@ sh coverage.sh
 
 ## Build and Run
 
+Run main.go
+``` bash
+# serve at localhost:9000
+go run main.go
+```
+
 Build and run native binary
 
 ```
-go build -o gonitor .
+sh Build.sh
 
 ./gonitor
 ```
