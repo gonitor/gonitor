@@ -3,24 +3,17 @@ package memory
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/gonitor/gonitor/service/memory"
+	"github.com/gonitor/gonitor/util"
 )
 
 // MemoryRestGetVirtual .
 func MemoryRestGetVirtual(context *gin.Context) {
 	body, err := memory.ServiceGetVirtualMemory()
-	if err == nil {
-		context.JSON(200, body)
-	} else {
-		context.String(400, err.Error())
-	}
+	util.RestHandleResponse(context, body, err)
 }
 
 // MemoryRestGetSwap .
 func MemoryRestGetSwap(context *gin.Context) {
 	body, err := memory.ServiceGetSwapMemory()
-	if err == nil {
-		context.JSON(200, body)
-	} else {
-		context.String(400, err.Error())
-	}
+	util.RestHandleResponse(context, body, err)
 }

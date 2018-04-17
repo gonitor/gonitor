@@ -3,24 +3,17 @@ package network
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/gonitor/gonitor/service/network"
+	"github.com/gonitor/gonitor/util"
 )
 
 // NetworkRestGetInterfaces .
 func NetworkRestGetInterfaces(context *gin.Context) {
 	body, err := network.ServiceGetInterfaces()
-	if err == nil {
-		context.JSON(200, body)
-	} else {
-		context.String(400, err.Error())
-	}
+	util.RestHandleResponse(context, body, err)
 }
 
 // NetworkRestGetConnections .
 func NetworkRestGetConnections(context *gin.Context) {
 	body, err := network.ServiceGetConnections()
-	if err == nil {
-		context.JSON(200, body)
-	} else {
-		context.String(400, err.Error())
-	}
+	util.RestHandleResponse(context, body, err)
 }

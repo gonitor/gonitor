@@ -10,10 +10,5 @@ import (
 // GpuRestGetInfo .
 func GpuRestGetInfo(context *gin.Context) {
 	body, err := gpu.ServiceGetInfo()
-	if err == nil {
-		context.Header(util.GetJSONHeader())
-		context.String(200, body)
-	} else {
-		context.String(400, err.Error())
-	}
+	util.RestHandleResponse(context, body, err)
 }
