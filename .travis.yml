@@ -24,6 +24,6 @@ after_success:
 
 deploy:
   provider: script
-  script: bash script/Dockerbuild.sh
+  script: bash Dockerbuild.sh
   on:
     branch: master    

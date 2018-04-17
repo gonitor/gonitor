@@ -1,4 +1,8 @@
-FROM golang:1.10
+FROM golang:1.10-alpine
+
+RUN apk --update upgrade \
+&& apk --no-cache --no-progress add git bash \
+&& rm -rf /var/cache/apk/*
 
 RUN mkdir /app
 RUN mkdir /go/src/app
