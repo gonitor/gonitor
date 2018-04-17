@@ -1,9 +1,9 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "description" : "StatNLP Monitor Service",
+    "description" : "Gonitor Service",
     "version" : "1.0.0",
-    "title" : "Monitor Service"
+    "title" : "Gonitor Service"
   },
   "basePath" : "/",
   "tags" : [ {
