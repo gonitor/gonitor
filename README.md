@@ -7,7 +7,10 @@
 Gonitor is fast server monitor service that make monitoring servers easy and simple. Gonitor provides many cool features for monitoring server CPU, Memory, GPU, Disk, Load, Network, etc. If you like or use Gonitor, please star or share it ! 
 
 ## Features
-- 
+- Provides server CPU, Memory, GPU, Disk, Load, Network, Host and Runtime information
+- Supports REST API and Swagger UI
+- Supports mutiple-platform build (darwin, windows and linux)
+- Supports Docker build and Travis CI
 
 ## Installation
 
