@@ -32,13 +32,9 @@ func main() {
 
 	router.Use(CORSMiddleware())
 
-	route.SetRoutes(router)
+	route.SetRestRoutes(router)
 
 	router.Use(static.Serve("/", static.LocalFile("./view", true)))
-
-	router.NoRoute(func(context *gin.Context) {
-		context.HTML(404, "404.html", gin.H{})
-	})
 
 	router.Run(":9000")
 }

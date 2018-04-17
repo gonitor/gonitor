@@ -48,3 +48,6 @@
 [prune]
   go-tests = true
   unused-packages = true
+  [[prune.project]]
+    name = "github.com/shirou/gopsutil"
+    unused-packages = false

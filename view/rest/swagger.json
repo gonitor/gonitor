@@ -1,0 +1,336 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "StatNLP Monitor Service",
+    "version" : "1.0.0",
+    "title" : "Monitor Service"
+  },
+  "basePath" : "/",
+  "tags" : [ {
+    "name" : "host"
+  }, {
+    "name" : "cpu"
+  },{
+    "name" : "gpu"
+  }, {
+    "name" : "memory"
+  }, {
+    "name" : "disk"
+  }, {
+    "name" : "load"
+  }, {
+    "name" : "network"
+  }, {
+    "name" : "runtime"
+  } ],
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/rest/v1/host/info" : {
+      "get" : {
+        "tags" : [ "host" ],
+        "summary" : "get host info",
+        "description" : "get host info",
+        "operationId" : "getHostInfo",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "host info"
+          },
+          "400" : {
+            "description" : "bad result"
+          }
+        }
+      }
+    },
+    "/rest/v1/host/temperature" : {
+      "get" : {
+        "tags" : [ "host" ],
+        "summary" : "get host sensor temperature",
+        "description" : "get sensor temperature",
+        "operationId" : "getHostTemperature",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "host temperature"
+          },
+          "400" : {
+            "description" : "bad result"
+          }
+        }
+      }
+    },
+    "/rest/v1/cpu/sum/percent" : {
+      "get" : {
+        "tags" : [ "cpu" ],
+        "summary" : "get cpu summary percentage",
+        "description" : "get cpu summary percentage",
+        "operationId" : "getCpuSumPercent",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "cpu summary percentage"
+          },
+          "400" : {
+            "description" : "bad result"
+          }
+        }
+      }
+    },
+    "/rest/v1/cpu/sum/time" : {
+      "get" : {
+        "tags" : [ "cpu" ],
+        "summary" : "get cpu summary time",
+        "description" : "get cpu summary time",
+        "operationId" : "getCpuSumTime",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "cpu summary time"
+          },
+          "400" : {
+            "description" : "bad result"
+          }
+        }
+      }
+    },
+    "/rest/v1/cpu/count" : {
+      "get" : {
+        "tags" : [ "cpu" ],
+        "summary" : "get cpu count",
+        "description" : "get cpu time",
+        "operationId" : "getCpuCount",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "cpu count"
+          },
+          "400" : {
+            "description" : "bad result"
+          }
+        }
+      }
+    },
+    "/rest/v1/cpu/info" : {
+      "get" : {
+        "tags" : [ "cpu" ],
+        "summary" : "get cpu info",
+        "description" : "get cpu info",
+        "operationId" : "getCpuInfo",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "cpu info"
+          },
+          "400" : {
+            "description" : "bad result"
+          }
+        }
+      }
+    },
+    "/rest/v1/gpu/info" : {
+      "get" : {
+        "tags" : [ "gpu" ],
+        "summary" : "get gpu info",
+        "description" : "get gpu info",
+        "operationId" : "getGpuInfo",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "gpu info"
+          },
+          "400" : {
+            "description" : "bad result"
+          }
+        }
+      }
+    },
+    "/rest/v1/cpu/percent" : {
+      "get" : {
+        "tags" : [ "cpu" ],
+        "summary" : "get cpu percent",
+        "description" : "get cpu percent",
+        "operationId" : "getCpuPercent",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "cpu percent"
+          },
+          "400" : {
+            "description" : "bad result"
+          }
+        }
+      }
+    },
+    "/rest/v1/cpu/time" : {
+      "get" : {
+        "tags" : [ "cpu" ],
+        "summary" : "get cpu time",
+        "description" : "get cpu time",
+        "operationId" : "getCpuTime",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "cpu time"
+          },
+          "400" : {
+            "description" : "bad result"
+          }
+        }
+      }
+    },
+    "/rest/v1/memory/virtual" : {
+      "get" : {
+        "tags" : [ "memory" ],
+        "summary" : "get virtual memory",
+        "description" : "get virtual memory",
+        "operationId" : "getMemoryVirtual",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "virtual memory"
+          },
+          "400" : {
+            "description" : "bad result"
+          }
+        }
+      }
+    },
+    "/rest/v1/memory/swap" : {
+      "get" : {
+        "tags" : [ "memory" ],
+        "summary" : "get swap memory",
+        "description" : "get swap memory",
+        "operationId" : "getMemorySwap",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "swap memory"
+          },
+          "400" : {
+            "description" : "bad result"
+          }
+        }
+      }
+    },
+    "/rest/v1/disk/usage" : {
+      "get" : {
+        "tags" : [ "disk" ],
+        "summary" : "get disk usage",
+        "description" : "get disk usage",
+        "operationId" : "getDiskUsage",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "disk usage"
+          },
+          "400" : {
+            "description" : "bad result"
+          }
+        }
+      }
+    },
+    "/rest/v1/load/average" : {
+      "get" : {
+        "tags" : [ "load" ],
+        "summary" : "get load average",
+        "description" : "get load average",
+        "operationId" : "getLoadAverage",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "load average"
+          },
+          "400" : {
+            "description" : "bad result"
+          }
+        }
+      }
+    },
+    "/rest/v1/load/misc" : {
+      "get" : {
+        "tags" : [ "load" ],
+        "summary" : "get load misc",
+        "description" : "get load misc",
+        "operationId" : "getLoadMisc",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "load misc"
+          },
+          "400" : {
+            "description" : "bad result"
+          }
+        }
+      }
+    },
+    "/rest/v1/network/interfaces" : {
+      "get" : {
+        "tags" : [ "network" ],
+        "summary" : "get network interface",
+        "description" : "get network interface",
+        "operationId" : "getNetworkInterface",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "lnetwork interface"
+          },
+          "400" : {
+            "description" : "bad result"
+          }
+        }
+      }
+    },
+    "/rest/v1/network/connections" : {
+      "get" : {
+        "tags" : [ "network" ],
+        "summary" : "get network connection",
+        "description" : "get network connection",
+        "operationId" : "getNetworkConnection",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "network connection"
+          },
+          "400" : {
+            "description" : "bad result"
+          }
+        }
+      }
+    },
+    "/rest/v1/runtime/goos" : {
+      "get" : {
+        "tags" : [ "runtime" ],
+        "summary" : "get runtime go OS",
+        "description" : "get runtime go OS",
+        "operationId" : "getRuntimeGoOS",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "runtime go OS"
+          },
+          "400" : {
+            "description" : "bad result"
+          }
+        }
+      }
+    }
+  },
+  "definitions" : { }
+}
