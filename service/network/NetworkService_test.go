@@ -13,10 +13,3 @@ func TestServiceGetInterfaces(test *testing.T) {
 	assert.Equal(test, err == nil, true)
 	assert.Equal(test, result != nil, true)
 }
-
-// TestServiceGetConnections .
-func TestServiceGetConnections(test *testing.T) {
-	result, err := network.ServiceGetConnections()
-	assert.Equal(test, err == nil, true)
-	assert.Equal(test, result != nil, true)
-}
