@@ -3,10 +3,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>StatNLP Monitor</title>
+  <title>Gonitor</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro:300,600|Titillium+Web:400,600,700" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./swagger-ui.css" >
-  <link rel="icon" type="image/ico" href="./favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="/swagger-ui.css" >
+  <link rel="icon" type="image/ico" href="/favicon.ico" />
   <style>
     html
     {
@@ -66,14 +66,14 @@
 
 <div id="swagger-ui"></div>
 
-<script src="./swagger-ui-bundle.js"> </script>
-<script src="./swagger-ui-standalone-preset.js"> </script>
+<script src="/swagger-ui-bundle.js"> </script>
+<script src="/swagger-ui-standalone-preset.js"> </script>
 <script>
 window.onload = function() {
   
   // Build a system
   const ui = SwaggerUIBundle({
-    url: "./swagger.json",
+    url: "/doc/swagger-rest-v1.json",
     dom_id: '#swagger-ui',
     deepLinking: true,
     presets: [

@@ -3,64 +3,41 @@ package cpu
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/gonitor/gonitor/service/cpu"
+	"github.com/gonitor/gonitor/util"
 )
 
 // CpuRestGetSumPercent .
 func CpuRestGetSumPercent(context *gin.Context) {
 	body, err := cpu.ServiceGetSummaryPercent()
-	if err == nil {
-		context.JSON(200, body)
-	} else {
-		context.String(400, err.Error())
-	}
+	util.RestHandleResponse(context, body, err)
 }
 
 // CpuRestGetCount .
 func CpuRestGetCount(context *gin.Context) {
 	body, err := cpu.ServiceGetCount()
-	if err == nil {
-		context.JSON(200, body)
-	} else {
-		context.String(400, err.Error())
-	}
+	util.RestHandleResponse(context, body, err)
 }
 
 // CpuRestGetSumTime .
 func CpuRestGetSumTime(context *gin.Context) {
 	body, err := cpu.ServiceGetSummaryTime()
-	if err == nil {
-		context.JSON(200, body)
-	} else {
-		context.String(400, err.Error())
-	}
+	util.RestHandleResponse(context, body, err)
 }
 
 // CpuRestGetInfo .
 func CpuRestGetInfo(context *gin.Context) {
 	body, err := cpu.ServiceGetInfo()
-	if err == nil {
-		context.JSON(200, body)
-	} else {
-		context.String(400, err.Error())
-	}
+	util.RestHandleResponse(context, body, err)
 }
 
 // CpuRestGetPercent .
 func CpuRestGetPercent(context *gin.Context) {
 	body, err := cpu.ServiceGetPercent()
-	if err == nil {
-		context.JSON(200, body)
-	} else {
-		context.String(400, err.Error())
-	}
+	util.RestHandleResponse(context, body, err)
 }
 
 // CpuRestGetTime .
 func CpuRestGetTime(context *gin.Context) {
 	body, err := cpu.ServiceGetTime()
-	if err == nil {
-		context.JSON(200, body)
-	} else {
-		context.String(400, err.Error())
-	}
+	util.RestHandleResponse(context, body, err)
 }

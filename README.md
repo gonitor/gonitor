@@ -9,6 +9,7 @@ Gonitor is fast server monitor service that make monitoring servers easy and sim
 ## Features
 - Provides server CPU, Memory, GPU, Disk, Load, Network, Host and Runtime information
 - Supports REST API and Swagger UI
+- Supports real-time monitoring with Stream
 - Supports mutiple-platform build (darwin, windows and linux)
 - Supports Docker build and Travis CI
 
@@ -48,8 +49,10 @@ sh coverage.sh
 
 Run main.go
 ``` bash
-# serve at localhost:9000
 go run main.go
+# serve at localhost:9000
+# serve REST API at localhost:9000/rest
+# serve Stream API at localhost:9000/stream (IE browser is not supported)
 ```
 
 Build and run native binary
