@@ -14,7 +14,7 @@ func SetupRouter() *gin.Engine {
 	router := gin.Default()
 	gin.SetMode(gin.TestMode)
 
-	route.SetRestRoutes(router)
+	route.SetRoutes(router)
 
 	return router
 }

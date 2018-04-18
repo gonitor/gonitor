@@ -6,8 +6,8 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// SetRestRoutes .
-func SetRestRoutes(router *gin.Engine) {
+// SetRoutes .
+func SetRoutes(router *gin.Engine) {
 	RestV1SetRoutes(router)
 	StreamV1SetRoutes(router)
 }
