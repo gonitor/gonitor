@@ -6,37 +6,37 @@ import (
 	"github.com/gonitor/gonitor/util"
 )
 
-// CpuRestGetSumPercent .
+// CpuRestGetSumPercent gets the percentage summary of cpu usage via GET request.
 func CpuRestGetSumPercent(context *gin.Context) {
 	body, err := cpu.ServiceGetSummaryPercent()
 	util.RestHandleResponse(context, body, err)
 }
 
-// CpuRestGetCount .
+// CpuRestGetCount gets the CPU counts via GET request.
 func CpuRestGetCount(context *gin.Context) {
 	body, err := cpu.ServiceGetCount()
 	util.RestHandleResponse(context, body, err)
 }
 
-// CpuRestGetSumTime .
+// CpuRestGetSumTime gets the time summary via GET request.
 func CpuRestGetSumTime(context *gin.Context) {
 	body, err := cpu.ServiceGetSummaryTime()
 	util.RestHandleResponse(context, body, err)
 }
 
-// CpuRestGetInfo .
+// CpuRestGetInfo gets the CPU information via GET request.
 func CpuRestGetInfo(context *gin.Context) {
 	body, err := cpu.ServiceGetInfo()
 	util.RestHandleResponse(context, body, err)
 }
 
-// CpuRestGetPercent .
+// CpuRestGetPercent gets CPU usage in details via GET request.
 func CpuRestGetPercent(context *gin.Context) {
 	body, err := cpu.ServiceGetPercent()
 	util.RestHandleResponse(context, body, err)
 }
 
-// CpuRestGetTime .
+// CpuRestGetTime gets CPU time information in details via GET request.
 func CpuRestGetTime(context *gin.Context) {
 	body, err := cpu.ServiceGetTime()
 	util.RestHandleResponse(context, body, err)

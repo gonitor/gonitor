@@ -6,13 +6,13 @@ import (
 	"github.com/gonitor/gonitor/util"
 )
 
-// MemoryRestGetVirtual .
+// MemoryRestGetVirtual gets the virtual memory via GET request.
 func MemoryRestGetVirtual(context *gin.Context) {
 	body, err := memory.ServiceGetVirtualMemory()
 	util.RestHandleResponse(context, body, err)
 }
 
-// MemoryRestGetSwap .
+// MemoryRestGetSwap gets the swap memory via GET request.
 func MemoryRestGetSwap(context *gin.Context) {
 	body, err := memory.ServiceGetSwapMemory()
 	util.RestHandleResponse(context, body, err)

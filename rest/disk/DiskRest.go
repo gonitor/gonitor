@@ -6,7 +6,7 @@ import (
 	"github.com/gonitor/gonitor/util"
 )
 
-// DiskRestGetUsage .
+// DiskRestGetUsage gets the disk usage via GET request.
 func DiskRestGetUsage(context *gin.Context) {
 	body, err := disk.ServiceGetUsage()
 	util.RestHandleResponse(context, body, err)

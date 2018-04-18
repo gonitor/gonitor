@@ -10,6 +10,7 @@ import (
 	"github.com/gonitor/gonitor/route"
 )
 
+// SetupRouter .
 func SetupRouter() *gin.Engine {
 	router := gin.Default()
 	gin.SetMode(gin.TestMode)

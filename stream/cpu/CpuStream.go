@@ -9,7 +9,7 @@ import (
 	"github.com/gonitor/gonitor/util"
 )
 
-// CpuStreamGetSumPercent .
+// CpuStreamGetSumPercent streams the percentage summary of cpu usage via GET request.
 func CpuStreamGetSumPercent(context *gin.Context) {
 	rateLimit, convertErr := util.ConvertStringToTimeDuration(context.Param("rateLimit"))
 	context.Stream(func(w io.Writer) bool {
@@ -22,7 +22,7 @@ func CpuStreamGetSumPercent(context *gin.Context) {
 	})
 }
 
-// CpuStreamGetCount .
+// CpuStreamGetCount streams the CPU counts via GET request.
 func CpuStreamGetCount(context *gin.Context) {
 	rateLimit, convertErr := util.ConvertStringToTimeDuration(context.Param("rateLimit"))
 	context.Stream(func(w io.Writer) bool {
@@ -35,7 +35,7 @@ func CpuStreamGetCount(context *gin.Context) {
 	})
 }
 
-// CpuStreamGetSumTime .
+// CpuStreamGetSumTime streams the time summary via GET request.
 func CpuStreamGetSumTime(context *gin.Context) {
 	rateLimit, convertErr := util.ConvertStringToTimeDuration(context.Param("rateLimit"))
 	context.Stream(func(w io.Writer) bool {
@@ -48,7 +48,7 @@ func CpuStreamGetSumTime(context *gin.Context) {
 	})
 }
 
-// CpuStreamGetInfo .
+// CpuStreamGetInfo streams the CPU information via GET request.
 func CpuStreamGetInfo(context *gin.Context) {
 	rateLimit, convertErr := util.ConvertStringToTimeDuration(context.Param("rateLimit"))
 	context.Stream(func(w io.Writer) bool {
@@ -61,7 +61,7 @@ func CpuStreamGetInfo(context *gin.Context) {
 	})
 }
 
-// CpuStreamGetPercent .
+// CpuStreamGetPercent streams CPU usage in details via GET request.
 func CpuStreamGetPercent(context *gin.Context) {
 	rateLimit, convertErr := util.ConvertStringToTimeDuration(context.Param("rateLimit"))
 	context.Stream(func(w io.Writer) bool {
@@ -74,7 +74,7 @@ func CpuStreamGetPercent(context *gin.Context) {
 	})
 }
 
-// CpuStreamGetTime .
+// CpuStreamGetTime streams CPU time information in details via GET request.
 func CpuStreamGetTime(context *gin.Context) {
 	rateLimit, convertErr := util.ConvertStringToTimeDuration(context.Param("rateLimit"))
 	context.Stream(func(w io.Writer) bool {

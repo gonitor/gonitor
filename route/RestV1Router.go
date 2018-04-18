@@ -12,10 +12,10 @@ import (
 	"github.com/gonitor/gonitor/rest/runtime"
 )
 
-// RestV1GroupEndPoint .
+// RestV1GroupEndPoint is the group endpoint for the REST version 1.
 var RestV1GroupEndPoint = "/rest/v1"
 
-// RestV1SetRoutes .
+// RestV1SetRoutes sets all API paths for the REST version 1.
 func RestV1SetRoutes(router *gin.Engine) {
 
 	restV1 := router.Group(RestV1GroupEndPoint)

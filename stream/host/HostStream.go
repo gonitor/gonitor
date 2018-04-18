@@ -9,7 +9,7 @@ import (
 	"github.com/gonitor/gonitor/util"
 )
 
-// HostStreamGetInfo .
+// HostStreamGetInfo streams the host information via GET request.
 func HostStreamGetInfo(context *gin.Context) {
 	rateLimit, convertErr := util.ConvertStringToTimeDuration(context.Param("rateLimit"))
 	context.Stream(func(w io.Writer) bool {
@@ -22,7 +22,7 @@ func HostStreamGetInfo(context *gin.Context) {
 	})
 }
 
-// HostStreamGetTemperature .
+// HostStreamGetTemperature streams the host temperature via GET request.
 func HostStreamGetTemperature(context *gin.Context) {
 	rateLimit, convertErr := util.ConvertStringToTimeDuration(context.Param("rateLimit"))
 	context.Stream(func(w io.Writer) bool {

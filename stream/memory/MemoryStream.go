@@ -9,7 +9,7 @@ import (
 	"github.com/gonitor/gonitor/util"
 )
 
-// MemoryStreamGetVirtual .
+// MemoryStreamGetVirtual streams the virtual memory via GET request.
 func MemoryStreamGetVirtual(context *gin.Context) {
 	rateLimit, convertErr := util.ConvertStringToTimeDuration(context.Param("rateLimit"))
 	context.Stream(func(w io.Writer) bool {
@@ -22,7 +22,7 @@ func MemoryStreamGetVirtual(context *gin.Context) {
 	})
 }
 
-// MemoryStreamGetSwap .
+// MemoryStreamGetSwap streams the swap memory via GET request.
 func MemoryStreamGetSwap(context *gin.Context) {
 	rateLimit, convertErr := util.ConvertStringToTimeDuration(context.Param("rateLimit"))
 	context.Stream(func(w io.Writer) bool {

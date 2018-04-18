@@ -9,7 +9,7 @@ import (
 	"github.com/gonitor/gonitor/util"
 )
 
-// RuntimeStreamGetGoOS .
+// RuntimeStreamGetGoOS streams the operating system (OS) of Go runtime via GET request.
 func RuntimeStreamGetGoOS(context *gin.Context) {
 	rateLimit, err := util.ConvertStringToTimeDuration(context.Param("rateLimit"))
 	context.Stream(func(w io.Writer) bool {

@@ -7,7 +7,7 @@ import (
 	"github.com/gonitor/gonitor/util"
 )
 
-// GpuRestGetInfo .
+// GpuRestGetInfo gets the GPU information via GET request.
 func GpuRestGetInfo(context *gin.Context) {
 	body, err := gpu.ServiceGetInfo()
 	util.RestHandleResponse(context, body, err)

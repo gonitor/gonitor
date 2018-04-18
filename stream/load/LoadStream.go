@@ -9,7 +9,7 @@ import (
 	"github.com/gonitor/gonitor/util"
 )
 
-// LoadStreamGetAverage .
+// LoadStreamGetAverage streams the load average via GET request.
 func LoadStreamGetAverage(context *gin.Context) {
 	rateLimit, convertErr := util.ConvertStringToTimeDuration(context.Param("rateLimit"))
 	context.Stream(func(w io.Writer) bool {
@@ -22,7 +22,7 @@ func LoadStreamGetAverage(context *gin.Context) {
 	})
 }
 
-// LoadStreamGetMisc .
+// LoadStreamGetMisc streams the load misc via GET request.
 func LoadStreamGetMisc(context *gin.Context) {
 	rateLimit, convertErr := util.ConvertStringToTimeDuration(context.Param("rateLimit"))
 	context.Stream(func(w io.Writer) bool {
