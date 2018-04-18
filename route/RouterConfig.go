@@ -6,13 +6,13 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// SetRoutes .
+// SetRoutes sets all routes or paths for API.
 func SetRoutes(router *gin.Engine) {
 	RestV1SetRoutes(router)
 	StreamV1SetRoutes(router)
 }
 
-// GetRestEndPoint .
+// GetRestEndPoint concatenates REST API endpoint with each given URL.
 func GetRestEndPoint(url string) string {
 	root := RestV1GroupEndPoint
 
@@ -22,7 +22,7 @@ func GetRestEndPoint(url string) string {
 	return buffer.String()
 }
 
-// GetStreamEndPoint .
+// GetStreamEndPoint concatenates Stream API endpoint with each given URL.
 func GetStreamEndPoint(url string) string {
 	root := StreamV1GroupEndPoint
 

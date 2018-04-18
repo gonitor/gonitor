@@ -4,7 +4,7 @@ import (
 	"github.com/shirou/gopsutil/disk"
 )
 
-// ServiceGetUsage .
+// ServiceGetUsage gets the disk usage.
 func ServiceGetUsage() (*disk.UsageStat, error) {
 	return disk.Usage("/")
 }

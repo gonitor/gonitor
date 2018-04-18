@@ -8,7 +8,7 @@ import (
 	"github.com/gonitor/gonitor/route"
 )
 
-//CORSMiddleware ...
+// CORSMiddleware configures the CORS middleware.
 func CORSMiddleware() gin.HandlerFunc {
 	return func(context *gin.Context) {
 		context.Writer.Header().Set("Access-Control-Allow-Origin", "*")

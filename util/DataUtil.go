@@ -6,7 +6,7 @@ import (
 	xj "github.com/basgys/goxml2json"
 )
 
-// ConvertXMLToJSON .
+// ConvertXMLToJSON converts XML string into JSON string.
 func ConvertXMLToJSON(xml string) string {
 	xmlReader := strings.NewReader(xml)
 	json, _ := xj.Convert(xmlReader)

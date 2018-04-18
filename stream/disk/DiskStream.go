@@ -9,7 +9,7 @@ import (
 	"github.com/gonitor/gonitor/util"
 )
 
-// DiskStreamGetUsage .
+// DiskStreamGetUsage streams the disk usage via GET request.
 func DiskStreamGetUsage(context *gin.Context) {
 	rateLimit, convertErr := util.ConvertStringToTimeDuration(context.Param("rateLimit"))
 	context.Stream(func(w io.Writer) bool {

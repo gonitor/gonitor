@@ -6,7 +6,7 @@ import (
 	"github.com/gonitor/gonitor/util"
 )
 
-// RuntimeRestGetGoOS .
+// RuntimeRestGetGoOS gets the operating system (OS) of Go runtime via GET request.
 func RuntimeRestGetGoOS(context *gin.Context) {
 	body := runtime.ServiceGetGoOS()
 	util.RestHandleResponse(context, body, nil)

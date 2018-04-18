@@ -4,12 +4,12 @@ import (
 	"github.com/shirou/gopsutil/mem"
 )
 
-// ServiceGetVirtualMemory .
+// ServiceGetVirtualMemory gets the virtual memory.
 func ServiceGetVirtualMemory() (*mem.VirtualMemoryStat, error) {
 	return mem.VirtualMemory()
 }
 
-// ServiceGetSwapMemory .
+// ServiceGetSwapMemory gets the swap memory.
 func ServiceGetSwapMemory() (*mem.SwapMemoryStat, error) {
 	return mem.SwapMemory()
 }

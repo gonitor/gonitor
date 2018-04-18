@@ -12,10 +12,10 @@ import (
 	"github.com/gonitor/gonitor/stream/runtime"
 )
 
-// StreamV1GroupEndPoint .
+// StreamV1GroupEndPoint is the group endpoint for the Stream version 1.
 var StreamV1GroupEndPoint = "/stream/v1"
 
-// StreamV1SetRoutes .
+// StreamV1SetRoutes sets all API paths for the Stream version 1.
 func StreamV1SetRoutes(router *gin.Engine) {
 
 	streamV1 := router.Group(StreamV1GroupEndPoint)

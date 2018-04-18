@@ -9,7 +9,7 @@ import (
 	"github.com/gonitor/gonitor/util"
 )
 
-// NetworkStreamGetInterfaces .
+// NetworkStreamGetInterfaces streams the network interaces via GET request.
 func NetworkStreamGetInterfaces(context *gin.Context) {
 	rateLimit, convertErr := util.ConvertStringToTimeDuration(context.Param("rateLimit"))
 	context.Stream(func(w io.Writer) bool {
@@ -22,7 +22,7 @@ func NetworkStreamGetInterfaces(context *gin.Context) {
 	})
 }
 
-// NetworkStreamGetConnections .
+// NetworkStreamGetConnections streams the network connections via GET request.
 func NetworkStreamGetConnections(context *gin.Context) {
 	rateLimit, convertErr := util.ConvertStringToTimeDuration(context.Param("rateLimit"))
 	context.Stream(func(w io.Writer) bool {

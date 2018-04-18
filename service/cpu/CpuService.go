@@ -4,32 +4,32 @@ import (
 	"github.com/shirou/gopsutil/cpu"
 )
 
-// ServiceGetSummaryPercent .
+// ServiceGetSummaryPercent gets the percentage summary of cpu usage.
 func ServiceGetSummaryPercent() ([]float64, error) {
 	return cpu.Percent(0, false)
 }
 
-// ServiceGetCount .
+// ServiceGetCount gets the CPU counts.
 func ServiceGetCount() (int, error) {
 	return cpu.Counts(true)
 }
 
-// ServiceGetSummaryTime .
+// ServiceGetSummaryTime gets the time summary.
 func ServiceGetSummaryTime() ([]cpu.TimesStat, error) {
 	return cpu.Times(false)
 }
 
-// ServiceGetInfo .
+// ServiceGetInfo gets the CPU information.
 func ServiceGetInfo() ([]cpu.InfoStat, error) {
 	return cpu.Info()
 }
 
-// ServiceGetPercent .
+// ServiceGetPercent gets CPU usage in details.
 func ServiceGetPercent() ([]float64, error) {
 	return cpu.Percent(0, true)
 }
 
-// ServiceGetTime .
+// ServiceGetTime gets CPU time information in details.
 func ServiceGetTime() ([]cpu.TimesStat, error) {
 	return cpu.Times(true)
 }
