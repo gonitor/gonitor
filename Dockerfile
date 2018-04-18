@@ -14,5 +14,5 @@ RUN dep ensure
 
 EXPOSE 9000
 
-RUN env GIN_MODE=release go build -o /app/main .
-CMD ["/app/main"]
+RUN go build -o /app/main .
+CMD ["env GIN_MODE=release","/app/main"]

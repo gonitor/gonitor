@@ -1,1 +1,1 @@
-env GIN_MODE=release go build -o gonitor .
+go build -o gonitor.out .

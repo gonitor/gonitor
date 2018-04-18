@@ -60,13 +60,16 @@ Build and run native binary
 ```
 sh Build.sh
 
-./gonitor
+./gonitor.out
 ```
 Build native binary for multiple platforms (darwin, windows and linux)
 
 ```
 sh BuildMulti.sh
 ```
+
+## Configuration
+Change the configuration at [AppConfig](config/AppConfig.go)
 
 ## Docker support 
 
