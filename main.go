@@ -32,7 +32,7 @@ func main() {
 
 	router.Use(CORSMiddleware())
 
-	route.SetRestRoutes(router)
+	route.SetRoutes(router)
 
 	router.Use(static.Serve("/", static.LocalFile("./view", true)))
 
