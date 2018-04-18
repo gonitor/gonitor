@@ -4,12 +4,17 @@ import (
 	"bytes"
 
 	"github.com/gin-gonic/gin"
+	"github.com/gonitor/gonitor/config"
 )
 
 // SetRoutes sets all routes or paths for API.
 func SetRoutes(router *gin.Engine) {
-	RestV1SetRoutes(router)
-	StreamV1SetRoutes(router)
+	if config.EnableRestAPI {
+		RestV1SetRoutes(router)
+	}
+	if config.EnableStreamAPI {
+		StreamV1SetRoutes(router)
+	}
 }
 
 // GetRestEndPoint concatenates REST API endpoint with each given URL.

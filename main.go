@@ -5,6 +5,7 @@ import (
 
 	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
+	"github.com/gonitor/gonitor/config"
 	"github.com/gonitor/gonitor/route"
 )
 
@@ -28,6 +29,9 @@ func CORSMiddleware() gin.HandlerFunc {
 }
 
 func main() {
+	if config.EnableProductionMode {
+		gin.SetMode(gin.ReleaseMode)
+	}
 	router := gin.Default()
 
 	router.Use(CORSMiddleware())
