@@ -6,30 +6,14 @@ import (
 	"testing"
 
 	"github.com/bmizerany/assert"
-	"github.com/gin-gonic/gin"
-	"github.com/gonitor/gonitor/route"
+	"github.com/gonitor/gonitor/config"
 )
-
-// SetupRouter .
-func SetupRouter() *gin.Engine {
-	router := gin.Default()
-	gin.SetMode(gin.TestMode)
-
-	route.SetRoutes(router)
-
-	return router
-}
-
-func main() {
-	router := SetupRouter()
-	router.Run()
-}
 
 //TestCpuRestGetSumPercent .
 func TestCpuRestGetSumPercent(test *testing.T) {
-	testRouter := SetupRouter()
+	testRouter := config.SetupTestRouter()
 
-	url := route.GetRestEndPoint("/cpu/sum/percent")
+	url := config.GetRestEndPoint("/cpu/sum/percent")
 	req, _ := http.NewRequest("GET", url, nil)
 	resp := httptest.NewRecorder()
 	testRouter.ServeHTTP(resp, req)
@@ -38,9 +22,9 @@ func TestCpuRestGetSumPercent(test *testing.T) {
 
 //TestCpuRestGetCount .
 func TestCpuRestGetCount(test *testing.T) {
-	testRouter := SetupRouter()
+	testRouter := config.SetupTestRouter()
 
-	url := route.GetRestEndPoint("/cpu/count")
+	url := config.GetRestEndPoint("/cpu/count")
 	req, _ := http.NewRequest("GET", url, nil)
 	resp := httptest.NewRecorder()
 	testRouter.ServeHTTP(resp, req)
@@ -49,9 +33,9 @@ func TestCpuRestGetCount(test *testing.T) {
 
 //TestCpuRestGetSumTime .
 func TestCpuRestGetSumTime(test *testing.T) {
-	testRouter := SetupRouter()
+	testRouter := config.SetupTestRouter()
 
-	url := route.GetRestEndPoint("/cpu/sum/time")
+	url := config.GetRestEndPoint("/cpu/sum/time")
 	req, _ := http.NewRequest("GET", url, nil)
 	resp := httptest.NewRecorder()
 	testRouter.ServeHTTP(resp, req)
@@ -60,9 +44,9 @@ func TestCpuRestGetSumTime(test *testing.T) {
 
 //TestCpuRestGetInfo .
 func TestCpuRestGetInfo(test *testing.T) {
-	testRouter := SetupRouter()
+	testRouter := config.SetupTestRouter()
 
-	url := route.GetRestEndPoint("/cpu/info")
+	url := config.GetRestEndPoint("/cpu/info")
 	req, _ := http.NewRequest("GET", url, nil)
 	resp := httptest.NewRecorder()
 	testRouter.ServeHTTP(resp, req)
@@ -71,9 +55,9 @@ func TestCpuRestGetInfo(test *testing.T) {
 
 //TestCpuRestGetPercent .
 func TestCpuRestGetPercent(test *testing.T) {
-	testRouter := SetupRouter()
+	testRouter := config.SetupTestRouter()
 
-	url := route.GetRestEndPoint("/cpu/percent")
+	url := config.GetRestEndPoint("/cpu/percent")
 	req, _ := http.NewRequest("GET", url, nil)
 	resp := httptest.NewRecorder()
 	testRouter.ServeHTTP(resp, req)
@@ -82,9 +66,9 @@ func TestCpuRestGetPercent(test *testing.T) {
 
 //TestCpuRestGetTime .
 func TestCpuRestGetTime(test *testing.T) {
-	testRouter := SetupRouter()
+	testRouter := config.SetupTestRouter()
 
-	url := route.GetRestEndPoint("/cpu/time")
+	url := config.GetRestEndPoint("/cpu/time")
 	req, _ := http.NewRequest("GET", url, nil)
 	resp := httptest.NewRecorder()
 	testRouter.ServeHTTP(resp, req)

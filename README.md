@@ -61,9 +61,6 @@ Build and run native binary
 sh Build.sh
 
 ./gonitor.out
-
-# use environment variable GIN_MODE to run at release mode
-env GIN_MODE=release ./gonitor.out
 ```
 Build native binary for multiple platforms (darwin, windows and linux)
 
@@ -71,9 +68,21 @@ Build native binary for multiple platforms (darwin, windows and linux)
 sh BuildMulti.sh
 ```
 
-## Configuration
-Change the configuration at [AppConfig](config/AppConfig.go)
+## Environment variables
 
+```bash
+    # enable production mode, default is false
+    env GONI_PRODMODE=true
+    
+    # disable REST API, default is true
+    env GONI_REST=false
+
+    # disable Stream API, default is true
+    env GONI_STREAM=false
+
+    # combine three environment variables
+    env GONI_PRODMODE=true GONI_REST=false GONI_STREAM=false
+```
 ## Docker support 
 
 Build docker image

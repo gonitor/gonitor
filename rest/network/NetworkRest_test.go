@@ -6,30 +6,15 @@ import (
 	"testing"
 
 	"github.com/bmizerany/assert"
-	"github.com/gin-gonic/gin"
-	"github.com/gonitor/gonitor/route"
+	"github.com/gonitor/gonitor/config"
 	"github.com/gonitor/gonitor/service/network"
 )
 
-func SetupRouter() *gin.Engine {
-	router := gin.Default()
-	gin.SetMode(gin.TestMode)
-
-	route.SetRoutes(router)
-
-	return router
-}
-
-func main() {
-	router := SetupRouter()
-	router.Run()
-}
-
 // TestNetworkRestGetInterfaces .
 func TestNetworkRestGetInterfaces(test *testing.T) {
-	testRouter := SetupRouter()
+	testRouter := config.SetupTestRouter()
 
-	url := route.GetRestEndPoint("/network/interfaces")
+	url := config.GetRestEndPoint("/network/interfaces")
 	req, _ := http.NewRequest("GET", url, nil)
 	resp := httptest.NewRecorder()
 	testRouter.ServeHTTP(resp, req)
@@ -44,9 +29,9 @@ func TestNetworkRestGetInterfaces(test *testing.T) {
 
 // NetworkRestGetConnections .
 func TestNetworkRestGetConnections(test *testing.T) {
-	testRouter := SetupRouter()
+	testRouter := config.SetupTestRouter()
 
-	url := route.GetRestEndPoint("/network/connections")
+	url := config.GetRestEndPoint("/network/connections")
 	req, _ := http.NewRequest("GET", url, nil)
 	resp := httptest.NewRecorder()
 	testRouter.ServeHTTP(resp, req)

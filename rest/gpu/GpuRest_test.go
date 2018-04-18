@@ -6,30 +6,15 @@ import (
 	"testing"
 
 	"github.com/bmizerany/assert"
-	"github.com/gin-gonic/gin"
-	"github.com/gonitor/gonitor/route"
+	"github.com/gonitor/gonitor/config"
 	"github.com/gonitor/gonitor/service/gpu"
 )
 
-func SetupRouter() *gin.Engine {
-	router := gin.Default()
-	gin.SetMode(gin.TestMode)
-
-	route.SetRoutes(router)
-
-	return router
-}
-
-func main() {
-	router := SetupRouter()
-	router.Run()
-}
-
 //TestGpuRestGetInfo .
 func TestGpuRestGetInfo(test *testing.T) {
-	testRouter := SetupRouter()
+	testRouter := config.SetupTestRouter()
 
-	url := route.GetRestEndPoint("/gpu/info")
+	url := config.GetRestEndPoint("/gpu/info")
 	req, _ := http.NewRequest("GET", url, nil)
 	resp := httptest.NewRecorder()
 	testRouter.ServeHTTP(resp, req)

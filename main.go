@@ -5,7 +5,7 @@ import (
 
 	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
-	"github.com/gonitor/gonitor/route"
+	"github.com/gonitor/gonitor/config"
 )
 
 // CORSMiddleware configures the CORS middleware.
@@ -28,11 +28,13 @@ func CORSMiddleware() gin.HandlerFunc {
 }
 
 func main() {
+	config.LoadEnvVariables()
+
 	router := gin.Default()
 
 	router.Use(CORSMiddleware())
 
-	route.SetRoutes(router)
+	config.SetRoutes(router)
 
 	router.Use(static.Serve("/", static.LocalFile("./view", true)))
 
