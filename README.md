@@ -42,7 +42,7 @@ go test ./...
 Or run all tests with coverage
 
 ```
-sh coverage.sh
+bash coverage.sh
 ```
 
 ## Build and Run
@@ -58,14 +58,14 @@ go run main.go
 Build and run native binary
 
 ``` bash
-sh Build.sh
+bash Build.sh
 
 ./gonitor.out
 ```
 Build native binary for multiple platforms (darwin, windows and linux)
 
 ```
-sh BuildMulti.sh
+bash BuildMulti.sh
 ```
 
 ## Environment variables

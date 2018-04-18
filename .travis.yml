@@ -17,13 +17,16 @@ install:
   - dep ensure
 
 script:
- - sh coverage.sh
+ - bash coverage.sh
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 
+before_deploy:
+  - bash Dockerbuild.sh
+
 deploy:
   provider: script
-  script: bash Dockerbuild.sh
+  script: bash Dockerpush.sh
   on:
     branch: master    

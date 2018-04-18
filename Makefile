@@ -10,10 +10,10 @@ install:
 	dep ensure
 
 test:
-	sh coverage.sh
+	bash coverage.sh
 
 build:
-	sh BuildMulti.sh
+	bash BuildMulti.sh
 
 buildDocker:
 	docker build -t gonitor/gonitor .
