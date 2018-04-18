@@ -57,10 +57,13 @@ go run main.go
 
 Build and run native binary
 
-```
+``` bash
 sh Build.sh
 
 ./gonitor.out
+
+# use environment variable GIN_MODE to run at release mode
+env GIN_MODE=release ./gonitor.out
 ```
 Build native binary for multiple platforms (darwin, windows and linux)
 
