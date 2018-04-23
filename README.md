@@ -3,6 +3,8 @@
 [![codecov](https://codecov.io/gh/gonitor/gonitor/branch/master/graph/badge.svg)](https://codecov.io/gh/gonitor/gonitor)
 [![Go Report Card](https://goreportcard.com/badge/github.com/gonitor/gonitor)](https://goreportcard.com/report/github.com/gonitor/gonitor)
 [![GoDoc](https://godoc.org/github.com/gonitor/gonitor?status.svg)](https://godoc.org/github.com/gonitor/gonitor)
+[![](https://images.microbadger.com/badges/image/gonitor/gonitor.svg)](https://microbadger.com/images/gonitor/gonitor)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/gonitor/gonitor/blob/master/LICENSE)
 
 Gonitor is fast server monitor service that make monitoring servers easy and simple. Gonitor provides many cool features for monitoring server CPU, Memory, GPU, Disk, Load, Network, etc. If you like or use Gonitor, please star or share it ! 
 
