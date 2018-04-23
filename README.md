@@ -88,7 +88,7 @@ bash BuildMulti.sh
 Build docker image
 
 ```
-docker build -t gonitor/gonitor .
+bash Dockerbuild.sh
 ```
 
 Run docker container
