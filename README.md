@@ -106,12 +106,6 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/gonitor/gonitor/tags). 
 
-## Authors
-
-* **Ai Nguyen** - [AiNguyenKaka](https://github.com/ainguyenkaka)
-
-See also the list of [contributors](https://github.com/gonitor/gonitor/contributors) who participated in this project.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
